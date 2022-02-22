@@ -1,6 +1,5 @@
 // dependencies
 const express = require('express');
-const routes = require('./routes/routes');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -8,10 +7,10 @@ const app = express();
 // parse incoming data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 
 // use created routes
-app.use('/', routes);
+require('./routes/routes')(app);
 
 // api listener
 app.listen(PORT, () => {
