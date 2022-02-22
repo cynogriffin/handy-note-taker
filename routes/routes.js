@@ -32,7 +32,7 @@ module.exports = app => {
         app.delete('/api/notes/:id', (req, res) => {
             notes.splice(req.params.id, 1);
             updateNotes();
-            console.log(`Note deleted with id ${req.params.id}`);
+            console.log(`Note deleted!`);
         });
 
         // html routes; 

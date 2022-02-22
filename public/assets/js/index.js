@@ -47,7 +47,7 @@ const deleteNote = (id) =>
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
-    },
+    }
   });
 
 const renderActiveNote = () => {
@@ -70,11 +70,12 @@ const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
+    id: Math.random()
   };
-  saveNote(newNote).then(() => {
+  saveNote(newNote);
     getAndRenderNotes();
     renderActiveNote();
-  });
+
 };
 
 // Delete the clicked note
@@ -82,17 +83,17 @@ const handleNoteDelete = (e) => {
   // Prevents the click listener for the list from being called when the button inside of it is clicked
   e.stopPropagation();
 
-  const note = e.target;
-  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+  const note = e.target.id;
+  const noteId = JSON.parse(e.target.parentElement.getAttribute('data-note'));
 
-  if (activeNote.id === noteId) {
+  if (activeNote.id === note) {
     activeNote = {};
   }
 
-  deleteNote(noteId).then(() => {
+  deleteNote(noteId);
     getAndRenderNotes();
     renderActiveNote();
-  });
+  
 };
 
 // Sets the activeNote and displays it
