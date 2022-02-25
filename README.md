@@ -24,19 +24,19 @@ The application is fully deployed on Heroku, so there is no installation needed.
 
 To use this app, first click the 'Get Started' button on the home page:
 
-![get started button](link)
+![get started button](https://github.com/cynogriffin/handy-note-taker/blob/main/assets/get%20started.PNG)
 
 Then you will be brought to the notes page where you can start by entering your first note by clicking on the title and text sections respectively: 
 
-![notes page](link)
+![notes page](https://github.com/cynogriffin/handy-note-taker/blob/main/assets/app%20screenshot.PNG)
 
 After you are satisfied with the note and want to store it, click the 'Save' icon that should appear in the upper right corner of the screen: 
 
-![save button](link)
+![save button](https://github.com/cynogriffin/handy-note-taker/blob/main/assets/save.PNG)
 
 If you would like to view your created notes, simply click on the note title on the left side of the screen and the note content will be presented. If you are done with a note and would like to delete it, all you have to do is click the red delete button beside the title of the saved note: 
 
-[saved notes and delete button](link)
+[saved notes and delete button](https://github.com/cynogriffin/handy-note-taker/blob/main/assets/note%20created.PNG)
 
 ## Credits
 ##### [Back to Table of Contents](#table-of-contents)
